@@ -1,0 +1,23 @@
+<div class="content">
+  <header class="bg-dark text-dark py-5">
+    <div class="container">
+        <h1 class="display-4">Explora Comandos de Linux</h1>
+        <p class="lead" style="width: 35em;">Ingresa un comando de Linux para obtener una descripción detallada y ejemplos prácticos de su uso.</p>
+        <form id="command-form" class="mt-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="input-group input-group-lg custom-input-width">
+                <input type="text" formControlName="command" id="command-input" class="form-control" placeholder="Ejemplo: ls" aria-label="Comando de Linux" required>
+                <button class="btn btn-primary" type="submit">Consultar</button>
+            </div>
+        </form>
+    </div>
+    <section id="results" class="container my-5" >
+       {{ result }}
+    </section>
+  </header>
+</div>
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+      <p class="mb-0">© 2024 Linux Command Explorer. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
